@@ -6,52 +6,60 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const env = process.env.NODE_ENV;
 
 module.exports = {
-  entry: './src/assets/js/main.js',
+    entry: './src/assets/js/main.js',
+    mode: env,
 
-  mode: env,
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+    },
 
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
-    publicPath: '/'
-  },
+    devServer: {
+        static: [
+            {
+                directory: path.join(__dirname, 'public'),
+                watch: true
+            }
+        ],
+        port: 3000
+    },
+    module: {
+        rules: [
+            {
+                test: /\.html$/,
+                use: ['html-loader']
+            }, {
+                test: /\.(png|jpg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name]-[hash][ext]'
+                }
+            }, {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            }, {
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    env == 'development'
+                        ? 'style-loader'
+                        : MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
+                ]
+            }
 
-  devServer: {
-    static: [
-      {
-        directory: path.join(__dirname, 'public'),
-        watch: true,
-      }
-    ],
-    port: 3000,
-  },
-
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: 'babel-loader'
-      },
-      {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-          env == 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
         ]
-      }
-    ]
-  },
+    },
 
-  plugins: [
-    new HtmlWebpackPlugin({template: '/src/index.html'}),
-    new webpack.HotModuleReplacementPlugin(),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    })
-  ]
+    plugins: [
+        new HtmlWebpackPlugin({template: 'src/index.html'}),
+        new webpack.HotModuleReplacementPlugin(),
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output both options are
+            // optional
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        })
+    ]
 };
