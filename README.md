@@ -1,1 +1,1 @@
-# Starter-project
+Webpack Boilerplate# webpack-boilerplate
