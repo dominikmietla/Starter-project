@@ -22,20 +22,23 @@ module.exports = {
             }
         ],
         port: 3000,
-        open: true
+        open: true,
+        hot: true,
     },
     module: {
         rules: [
             {
                 test: /\.html$/,
                 use: ['html-loader']
-            }, {
+            }, 
+            {
                 test: /\.(png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'images/[name]-[hash][ext]'
                 }
-            }, {
+            }, 
+            {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'

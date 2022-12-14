@@ -1,0 +1,59 @@
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("https://hello.myfonts.net/count/3beae5");
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ProximaNovaT-Thin.woff2') format('woff2'), url('../fonts/ProximaNovaT-Thin.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ProximaNova-Light.woff2') format('woff2'), url('../fonts/ProximaNova-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'), url('../fonts/ProximaNova-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ProximaNova-Medium.woff2') format('woff2'), url('../fonts/ProximaNova-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ProximaNova-Semibold.woff2') format('woff2'), url('../fonts/ProximaNova-Semibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'), url('../fonts/ProximaNova-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ProximaNova-Extrabld.woff2') format('woff2'), url('../fonts/ProximaNova-Extrabld.woff') format('woff');
+}
+
