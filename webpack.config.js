@@ -21,7 +21,8 @@ module.exports = {
                 watch: true
             }
         ],
-        port: 3000
+        port: 3000,
+        open: true
     },
     module: {
         rules: [
@@ -29,7 +30,7 @@ module.exports = {
                 test: /\.html$/,
                 use: ['html-loader']
             }, {
-                test: /\.(png|jpg)$/i,
+                test: /\.(png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'images/[name]-[hash][ext]'
