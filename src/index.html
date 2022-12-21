@@ -1,12 +1,719 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body >
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Daily Podcast</title>
     
-</body>
+        <link rel="shortcut icon" href="#">  <!-- This link is for close ":5500/favicon.ico:1" error in console -->
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide.min.css">
+        <link rel="stylesheet" href="./assets/scss/main.scss">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-logo">
+                    <img  src="./assets/svg-icons/Header/Nav-Main-Logo/logo.svg" alt="Nav logo circle">
+                </div>
+                <div class="nav-menu">
+                    <button class="nav-menu-btn"><a href="#episodes">Episodes</a></button>
+                    <button class="nav-menu-btn"><a href="#about">About</a></button>
+                    <div class="more-menu-btn">
+                        <button class="more-btn">More
+                            <img class="nav-arrow-image" src="../svg-icons/Header/More-Icon-Down/Arrow - Down.svg" alt="Arrow">
+                        </button>
+                        <div class="dropdown-content">
+                            <button><a href="../html/PodCast.html">PodCast</a></button>
+                            <button><a href="../html/News.html">News</a></button>
+                            <button><a href="../html/Artwork.html">Artwork</a></button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="nav-main-btns">
+                    <button class="nav-main-btn"><a href="#episodes">Recent Episodes</a></button>
+                    <button class="nav-main-btn">Subscribe</button>
+                </div>
+            </nav>
+    
+            <h1>Your Daily <span>Podcast</span></h1>
+            <p class="header-short-description">We cover all kinds of categories and <span>a weekly special guest.</span></p>
+            <button class="header-sub-btn darker-btn btn-special-animation">Subscribe</button>
+            <div class="hero-shape-swirl">
+                <img src="../svg-icons/Header/Hero-Shape-Swirl/Hero-Shape-Swirl.svg" alt="Black swirl">
+            </div>
+            <div class="hero-shape-stars">
+                <img src="../svg-icons/Header/Hero-Shape-Stars/Hero-Shape-Stars.svg" alt="Star">    
+            </div>
+    
+            <div id="thumbnail-carousel" class="splide" >
+                <div class="splide__track">
+                    <ul class="splide__list">
+                            <li class="splide__slide">      
+                                <div class="card">
+                                    <img src="../img/Slide-Cards-Backgrounds/Tesla-Autopilot.jpg" alt="A bus standing on two wheels against a background home.">
+                                    <p class="card-title">Tesla Autopilot</p>
+                                    <div class="card-platforms">
+                                        <img src="../svg-icons/Header/Slide-Card-Platforms/Slide-Cards-Platforms.svg" alt="Google Podcast, Spotify and YouTube Logos">
+                                    </div> 
+                                    <div class="vectors-first">
+                                        <img src="../svg-icons/Header/Slide-Cards-Vectors/Tesla-Autopilot-Vectors.svg" alt="Vectors">
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <img src="../img/Slide-Cards-Backgrounds/Self-Confidence.jpg" alt="Figure of a man standing with his back against the background of plants">
+                                    <p class="card-title">Self-confidence</p>
+                                    <div class="card-platforms">
+                                        <img src="../svg-icons/Header/Slide-Card-Platforms/Slide-Cards-Platforms.svg" alt="Google Podcast, Spotify and YouTube Logos">
+                                    </div> 
+                                    <div class="vectors-second">
+                                        <img src="../svg-icons/Header/Slide-Cards-Vectors/Self-Confidence-Vectors.svg" alt="Vectors">
+                                    </div> 
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <img src="../img/Slide-Cards-Backgrounds/Perplexed-Mind.jpg" alt="A girl who is putting out her tongue">
+                                    <p class="card-title">Perplexed Mind</p>
+                                    <div class="card-platforms">
+                                        <img src="../svg-icons/Header/Slide-Card-Platforms/Slide-Cards-Platforms.svg" alt="Google Podcast, Spotify and YouTube Logos">
+                                    </div>
+                                    <div class="vectors-third">
+                                        <img src="../svg-icons/Header/Slide-Cards-Vectors/Perplexed-Mind-Vectors.svg" alt="Vectors">
+                                    </div> 
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <img src="../img/Slide-Cards-Backgrounds/Women's Rights.jpg" alt="A group of girls">
+                                    <p class="card-title">Women's Rights</p>
+                                    <div class="card-platforms">
+                                        <img src="../svg-icons/Header/Slide-Card-Platforms/Slide-Cards-Platforms.svg" alt="Google Podcast, Spotify and YouTube Logos">
+                                    </div>
+                                    <div class="vectors-fourth">
+                                        <img src="../svg-icons/Header/Slide-Cards-Vectors/Women's-Rights-Vectors.svg" alt="Vectors">
+                                    </div> 
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <img src="../img/Slide-Cards-Backgrounds/Social-Class.jpg" alt="A man who is sitting in a shopping cart">
+                                    <p class="card-title">Social Class</p>
+                                    <div class="card-platforms">
+                                        <img src="../svg-icons/Header/Slide-Card-Platforms/Slide-Cards-Platforms.svg" alt="Google Podcast, Spotify and YouTube Logos">
+                                    </div>
+                                    <div class="vectors-fifth">
+                                        <img src="../svg-icons/Header/Slide-Cards-Vectors/Social-Classes-Vectors.svg" alt="Vectors">
+                                    </div> 
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="supported-platforms">
+                <div class="platforms">
+                    
+                    <p>Supported by:</p>
+                    
+                    <div class="platform">
+                        <img class="logo" src="../svg-icons/Header/Supported-Platforms/Spotify-SVG.svg" alt="Spotify logo">
+                    </div>
+                    <div class="platform">
+                        <img class="logo" src="../svg-icons/Header/Supported-Platforms/Google-Podcast-SVG.svg" alt="Google Podcast logo">
+                    </div>
+                    <div class="platform">
+                        <img class="logo" src="../svg-icons/Header/Supported-Platforms/Youtube-SVG.svg" alt="YouTube logo">
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <main>
+            <section id="about" class="section">
+    
+                <img class="scribble" src="../svg-icons/Main/Scribble-Vector-Red.svg" alt="Scribble">
+                <h2 class="section-title">Talk.Listen.Get inspired <span>by every minute of it</span></h2>
+    
+                <div class="ideas-area">
+                    <div class="idea">
+                        <img src="../img/About-Section-JPG/Thinking-Man.jpg" alt="An thinking man">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi delectus commodi quidem!</p>
+                    </div>
+                    <div class="idea">
+                        <img src="../img/About-Section-JPG/Bulb.jpg" alt="Glowing light bulb">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi rem adipisci repudiandae!</p>
+                    </div>
+                </div>
+    
+                <div class="quote-area">
+                    <div class="quore-vectors">
+                        <img src="../svg-icons/Main/About-Section/About-Vector-1.svg" alt="Vector">
+                        <img src="../svg-icons/Main/About-Section/About-Vector-2.svg" alt="Vector">
+                        <img src="../svg-icons/Main/About-Section/“.svg" alt="quotation marks">
+                    </div>
+    
+                    <p>One of the best daily podcasts that <span>covers every topic on Spotify.</span></p>
+    
+                    <div class="quote-author">
+                        <div class="author">
+                            <img src="../img/About-Section-JPG/User-John-Smith.jpg" alt="John">
+                            <p class="author-first-name">John</p>
+                        </div>
+                        <div class="author-platform">
+                            <img src="../svg-icons/Main/About-Section/User-Vector-Platform.svg" alt="Spotify logo with position name">
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="user-opinions" class="section">
+              
+                <h2 class="section-title">What our listeners say</h2>
+                <p class="text-under-section-title">Their experience throughout every platform</p>
+    
+                <div class="user-opinions-vectors">
+                    <img class="scribble" src="../svg-icons/Main/Scribble-Vector-Black.svg" alt="Scribble">
+                    <img src="../svg-icons/Main/User-Opinions-Section/Sparkle-User-Opinions.svg" alt="Sparkle">
+                </div>
+    
+                <div class="opinions-container swiper">
+                    <div class="swiper-wrapper">
+     
+                        <div class="opinion swiper-slide">
+                            <img class="opinion-quotation" src='../svg-icons/Main/User-Opinions-Section/"-User-Opinions-Section.svg' alt="quotation marks">
+                            <div class="opinion-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed beatae dolorem aliquid doloribus est ea sapiente recusandae incidunt non consequatur.</p>
+                            </div>
+                            <div class="user">
+                                <img src="../img/Opinions-User-Photo/User-1.jpg" alt="User photo">
+                                <p class="user-first-name">Luna</p>
+                                <img src="../svg-icons/Main/User-Opinions-Section/Spotify-Platform.svg" alt="Spotify logo">
+                            </div>
+                        </div>
+                        <div class="opinion swiper-slide">
+                            <img class="opinion-quotation" src='../svg-icons/Main/User-Opinions-Section/"-User-Opinions-Section.svg' alt="quotation marks">
+                            <div class="opinion-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed beatae dolorem aliquid doloribus est ea sapiente recusandae ;)</p>
+                            </div>
+                            <div class="user">
+                                <img src="../img/Opinions-User-Photo/User-2.jpg" alt="User photo">
+                                <p class="user-first-name">Emily</p>
+                                <img src="../svg-icons/Main/User-Opinions-Section/Spotify-Platform.svg" alt="Spotify logo">
+                            </div>
+                        </div>
+                        <div class="opinion swiper-slide">
+                            <img class="opinion-quotation" src='../svg-icons/Main/User-Opinions-Section/"-User-Opinions-Section.svg' alt="quotation marks">
+                            <div class="opinion-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                            </div>
+                            <div class="user">
+                                <img src="../img/Opinions-User-Photo/User-3.jpg" alt="User photo">
+                                <p class="user-first-name">Mia</p>
+                                <img src="../svg-icons/Main/User-Opinions-Section/Google-Podcast-Platform.svg" alt="Google Podcast logo">
+                            </div>
+                        </div>
+                        <div class="opinion swiper-slide">
+                            <img class="opinion-quotation" src='../svg-icons/Main/User-Opinions-Section/"-User-Opinions-Section.svg' alt="quotation marks">
+                            <div class="opinion-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed beatae dolorem aliquid doloribus est ea sapiente recusandae incidunt non. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <div class="user">
+                                <img src="../img/Opinions-User-Photo/User-2.jpg" alt="User photo">
+                                <p class="user-first-name">Olivia</p>
+                                <img src="../svg-icons/Main/User-Opinions-Section/Spotify-Platform.svg" alt="Spotify logo">
+                            </div>
+                        </div>  
+    
+                    </div>
+                </div>
+            </section>
+            
+            <section id="benefits" class="section">
+    
+                <h2 class="section-title">Membership benefits</h2>
+                <p class="text-under-section-title">Become our sponsor and get all benefits</p>
+                <img class="scribble" src="../svg-icons/Main/Scribble-Vector-Black.svg" alt="Scribble">
+                <img class="benefits-uniquely-scribble" src="../svg-icons/Main/Benefits-Cards/Above-Benefits-H2-Vector.svg" alt="Scribble">
+    
+                <div class="benefits-container">
+                    <div class="benefit-card">
+                        <div class="benefit-card-photo">
+                            <img src="../svg-icons/Main/Benefits-Cards/Benefit-Card-Vector-1.svg" alt="Vector">
+                        </div>
+                        <h3 class="benefit-title">Topic by Request</h3>
+                        <p class="benefit-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, alias.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card-photo">
+                            <img src="../svg-icons/Main/Benefits-Cards/Benefit-Card-Vector-2.svg" alt="Vector">
+                        </div>
+                        <h3 class="benefit-title">Exclusive Content</h3>
+                        <p class="benefit-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, alias.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card-photo">
+                            <img src="../svg-icons/Main/Benefits-Cards/Benefit-Card-Vector-3.svg" alt="Vector">
+                        </div>
+                        <h3 class="benefit-title">Join the Community</h3>
+                        <p class="benefit-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, alias.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card-photo">
+                            <img src="../svg-icons/Main/Benefits-Cards/Benefit-Card-Vector-4.svg" alt="Vector">
+                        </div>
+                        <h3 class="benefit-title">Livestreaming Access</h3>
+                        <p class="benefit-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, alias.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card-photo">
+                            <img src="../svg-icons/Main/Benefits-Cards/Benefit-Card-Vector-5.svg" alt="Vector">
+                        </div>
+                        <h3 class="benefit-title">Exclusive Episodes & Merch</h3>
+                        <p class="benefit-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, alias.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card-photo">
+                            <img src="../svg-icons/Main/Benefits-Cards/Benefit-Card-Vector-6.svg" alt="Vector">
+                        </div>
+                        <h3 class="benefit-title">Add much more!</h3>
+                        <p class="benefit-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, alias.</p>
+                    </div>
+                </div>
+                <button class="benefits-btn darker-btn btn-special-animation">See pricing</button>
+            </section>
+    
+            <section id="episodes" class="section">
+    
+                <h2 class="section-title">Recent Episodes</h2>
+                <p class="text-under-section-title">Available on your favourite platform</p>
+                <img class="scribble" src="../svg-icons/Main/Scribble-Vector-Black.svg" alt="Scribble">
+                <img class="episodes-sparkle" src="../svg-icons/Main/Episodes-Section/Episodes-Sparkle.svg" alt="Parkle">
+    
+                <div class="episodes-container">
+                    <div class="episode-card episode-card-shadow">
+                        <div class="card-cover">
+                            <div class="card-cover-image">
+                                <img src="../img/Episodes-Cards-Photo/Photo-of-Eps.-6.jpg" alt="Several chairs standing on the pitch.">
+                            </div>
+                            <div class="card-cover-items">
+                                <div class="card-cover-title">
+                                    <p>Eps. 6</p>
+                                    <h3 class="red-title">Pandemic Becoming Endemic</h3>
+                                </div>
+                                <div class="card-cover-line"></div>
+                                <div class="card-cover-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel mollitia at error!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="tags">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-6-Tag-1.svg" alt="Exemplary #tag">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-6-Tag-2.svg" alt="Exemplary #tag">
+                            </div>
+                            <div class="host-authors">
+                                <p>Hosted by:</p>
+                                <img src="../img/Episodes-Cards-Photo/Host-Authors.jpg" alt="Photo of two smiling women">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="episode-card">
+                        <div class="card-cover">
+                            <div class="card-cover-image">
+                                <img src="../img/Episodes-Cards-Photo/Photo-of-Eps.-5.jpg" alt="A bus standing on two wheels against a background home.">
+                            </div>
+                            <div class="card-cover-items">
+                                <div class="card-cover-title">
+                                    <p>Eps. 5</p>
+                                    <h3>Tesla Autopilot Controversy</h3>
+                                </div>
+                                <div class="card-cover-line"></div>
+                                <div class="card-cover-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel mollitia at error!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="tags">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-5-Tag-1.svg" alt="Exemplary #tag">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-5-Tag-2.svg" alt="Exemplary #tag">
+                            </div>
+                            <div class="host-authors">
+                                <p>Hosted by:</p>
+                                <img src="../img/Episodes-Cards-Photo/Host-Authors.jpg" alt="Photo of two smiling women">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="episode-card">
+                        <div class="card-cover">
+                            <div class="card-cover-image">
+                                <img src="../img/Episodes-Cards-Photo/Photo-of-Eps.-4.jpg" alt="A group of girls">
+                            </div>
+                            <div class="card-cover-items">
+                                <div class="card-cover-title">
+                                    <p>Eps. 4</p>
+                                    <h3>Women's rights? Is it alright?</h3>
+                                </div>
+                                <div class="card-cover-line"></div>
+                                <div class="card-cover-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel mollitia at error!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="tags">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-4-Tag-1.svg" alt="Exemplary #tag">
+                            </div>
+                            <div class="host-authors">
+                                <p>Hosted by:</p>
+                                <img src="../img/Episodes-Cards-Photo/Host-Authors.jpg" alt="Photo of two smiling women">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="episode-card  episode-card-shadow">
+                        <div class="card-cover">
+                            <div class="card-cover-image">
+                                <img src="../img/Episodes-Cards-Photo/Photo-of-Eps.-3.jpg" alt="Figure of a man standing with his back against the background of plants">
+                            </div>
+                            <div class="card-cover-items">
+                                <div class="card-cover-title">
+                                    <p>Eps. 3</p>
+                                    <h3 class="red-title">How to Deal with Self-Confidence</h3>
+                                </div>
+                                <div class="card-cover-line"></div>
+                                <div class="card-cover-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel mollitia at error!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="tags">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-3-Tag-1.svg" alt="Exemplary #tag">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-3-Tag-2.svg" alt="Exemplary #tag">
+                            </div>
+                            <div class="host-authors">
+                                <p>Hosted by:</p>
+                                <img src="../img/Episodes-Cards-Photo/Host-Authors.jpg" alt="Photo of two smiling women">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="episode-card episode-card-shadow">
+                        <div class="card-cover">
+                            <div class="card-cover-image">
+                                <img src="../img/Episodes-Cards-Photo/Photo-of-Eps.-2.jpg" alt="A man who is sitting in a shopping cart">
+                            </div>
+                            <div class="card-cover-items">
+                                <div class="card-cover-title">
+                                    <p>Eps. 2</p>
+                                    <h3 class="red-title">Type of Social Classes of People</h3>
+                                </div>
+                                <div class="card-cover-line"></div>
+                                <div class="card-cover-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel mollitia at error!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="tags">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-2-Tag-1.svg" alt="Exemplary #tag">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-2-Tag-2.svg" alt="Exemplary #tag">
+                            </div>
+                            <div class="host-authors">
+                                <p>Hosted by:</p>
+                                <img src="../img/Episodes-Cards-Photo/Host-Authors.jpg" alt="Photo of two smiling  women">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="episode-card">
+                        <div class="card-cover">
+                            <div class="card-cover-image">
+                                <img src="../img/Episodes-Cards-Photo/Photo-of-Eps.-1.jpg" alt="A girl who is putting out her tongue">
+                            </div>
+                            <div class="card-cover-items">
+                                <div class="card-cover-title">
+                                    <p>Eps. 1</p>
+                                    <h3>Are you a Perplexed Mind Person?</h3>
+                                </div>
+                                <div class="card-cover-line"></div>
+                                <div class="card-cover-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel mollitia at error!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="tags">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-1-Tag.svg" alt="Exemplary #tag">
+                                <img src="../svg-icons/Main/Episodes-Section/Tags/Eps.-1-Tag-2.svg" alt="Exemplary #tag">
+                            </div>
+                            <div class="host-authors">
+                                <p>Hosted by:</p>
+                                <img src="../img/Episodes-Cards-Photo/Host-Authors.jpg" alt="Photo of two smiling women">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="episodes-btn darker-btn btn-special-animation">Browse all episodes</button>
+            </section>
+            
+            <section id="become-sponsor" class="section">
+                
+                <img class="sponsor-vector-1"  src="../svg-icons/Main/Become-Sponsor-Section/Sparkle-Become-Sponsor-Section.svg" alt="Sparkle">
+                <img class="sponsor-vector-2"  src="../svg-icons/Main/Become-Sponsor-Section/Black-Star-Become-Sponsor-Section.svg" alt="Black star">
+                <img class="sponsor-vector-3"  src="../svg-icons/Main/Become-Sponsor-Section/Black-Swirl-Become-Sponsor-Section.svg" alt="Black swirl">
+    
+                <h2 class="section-title">Become our sponsor</h2>
+                <p class="text-under-section-title">Get exclusive episodes, merch and more</p>
+                <img class="scribble" src="../svg-icons/Main/Scribble-Vector-Black.svg" alt="Scribble">
+    
+                <div class="sponsoring-offers">
+                    <div class="offer-card">
+                        <div class="offer-info">
+                            <h2>Member</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque dignissimos asperiores aperiam!</p>
+                            <div class="subscription">
+                                <div class="sponsoring-btn">
+                                    <button class="darker-btn btn-special-animation">Subcribe</button>
+                                </div>
+                                <div class="price">
+                                    <h3 class="red-title">$9.99</h3>
+                                    <p>/month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sponsoring-benefits">
+                            <p>What's included:</p>
+                            <ul class="sponsoring-benefits-list">
+                                <li>Exclusive Content</li>
+                                <li>5% Discount on Merch</li>
+                                <li>Join the Community</li>
+                                <li>Livestreaming Acces</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="offer-card offer-special">
+                        <div class="offer-info">
+                            <h2>Family</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque dignissimos asperiores aperiam!</p>
+                            <div class="offer-info-special">
+                                <p>Most popular</p>
+                            </div>
+                            <div class="subscription">
+                                <div class="sponsoring-btn">
+                                    <button class="darker-btn btn-special-animation">Subcribe</button>
+                                </div>
+                                <div class="price">
+                                    <h3 class="red-title">$14.99</h3>
+                                    <p>/month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sponsoring-benefits">
+                            <p>What's included:</p>
+                            <ul class="sponsoring-benefits-list">
+                                <li><span>Everything in Tier 1</span></li>
+                                <li>Free tickets to Events</li>
+                                <li>Limited Edition Merch</li>
+                                <li>Promote your Product</li>
+                                <li>Request Topic</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-info">
+                            <h2>Official</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque dignissimos asperiores aperiam!</p>
+                            <div class="subscription">
+                                <div class="sponsoring-btn">
+                                    <button class="darker-btn btn-special-animation">Subcribe</button>
+                                </div>
+                                <div class="price">
+                                    <h3 class="red-title">$29.99</h3>
+                                    <p>/month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sponsoring-benefits">
+                            <p>What's included:</p>
+                            <ul class="sponsoring-benefits-list">
+                                <li><span>Everything in Tier 2</span></li>
+                                <li>Exclusive Badge on Livestreaming</li>
+                                <li>Become an Official Sponsor</li>
+                                <li>Early Access to All Episodes</li>
+                                <li>Free Strikers and Merch</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="news-section" class="section">
+    
+                <img class="news-black-star" src="../svg-icons/Main/News-Section/News-Section-Vector-1.svg" alt="Black star">
+                <img class="news-black-swirl" src="../svg-icons/Main/News-Section/News-Section-Vector-2.svg" alt="Black swirl">
+    
+                <h2 class="section-title">Article and News</h2>
+                <p class="text-under-section-title">News, tips, tricks and more</p>
+                <img class="scribble" src="../svg-icons/Main/Scribble-Vector-Black.svg" alt="Scribble">
+    
+                <div class="news-container">
+    
+                    <div class="news-card">
+                        <div class="news-card-image">
+                            <img src="../img/News-Cards-Photo/News-Card-Photo-1.jpg" alt="Set of microphones in a radio studio">
+                        </div>
+                        <div class="news-card-info">
+                            <div class="news-card-title">
+                                <p>Podcast</p>
+                                <h2>Setup your own podcast</h2>
+                            </div>
+                            <div class="news-card-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quam quae labore mollitia et explicabo expedita error velit impedit sit eligendi tempora aliquid nihil, assumenda debitis. Nulla, ratione quasi.</p>
+                            </div>
+                            <div class="news-card-line"></div>
+                            <div class="news-card-tags-date">
+                                <div class="news-card-tags">
+                                    <img src="../svg-icons/Main/News-Section/Tags/News-Card-1-Tag-1.svg" alt="#tag">
+                                    <img src="../svg-icons/Main/News-Section/Tags/News-Card-1-Tag-2.svg" alt="#tag">
+                                </div>
+                                <div class="news-card-date">
+                                    <p>Mai 14, 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-card-image">
+                            <img src="../img/News-Cards-Photo/News-Card-Photo-2.jpg" alt="Woman painting on the wall">
+                        </div>
+                        <div class="news-card-info">
+                            <div class="news-card-title">
+                                <p>Tips & Trick</p>
+                                <h2 class="red-title">Doodle artwork 101</h2>
+                            </div>
+                            <div class="news-card-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quam quae labore mollitia et explicabo expedita error velit impedit sit eligendi tempora aliquid nihil, assumenda debitis. Nulla, ratione quasi.</p>
+                            </div>
+                            <div class="news-card-line"></div>
+                            <div class="news-card-tags-date">
+                                <div class="news-card-tags">
+                                    <img src="../svg-icons/Main/News-Section/Tags/News-Card-2-Tag-1.svg" alt="#tag">
+                                    <img src="../svg-icons/Main/News-Section/Tags/News-Card-2-Tag-2.svg" alt="#tag">
+                                    <img src="../svg-icons/Main/News-Section/Tags/News-Card-2-Tag-3.svg" alt="#tag">
+                                </div>
+                                <div class="news-card-date">
+                                    <p>Sep 22, 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="news-btn darker-btn btn-special-animation">Browse all</button>
+            </section>
+    
+            <section id="app-advertisement" class="section">
+    
+                <!-- <img  src="../svg-icons/Main/App-Advertisement-Section/Big-Sparkle-1.svg" alt="Red sparkle"> -->
+                <!-- <img  src="../svg-icons/Main/App-Advertisement-Section/Medium-Sparkle-2.svg" alt="Red sparkle"> -->
+                <!-- <img  src="../svg-icons/Main/App-Advertisement-Section/Small-Sparkle-3.svg" alt="Red sparkle"> -->
+                <!-- <img  src="../svg-icons/Main/App-Advertisement-Section/Doodles.svg" alt="Black doodles">  -->
+    
+                <div class="title-special-guest">Beta</div>
+                <h2 class="app-section-title">Available now <span>Pod of Cast App</span></h2>
+                <p class="app-text-under-section-title">We just launched our podcast app!</p>
+                <img class="scribble" src="../svg-icons/Main/Scribble-Vector-Red.svg" alt="Scribble">
+    
+                <button class="app-btn darker-btn btn-special-animation">Download now</button>
+    
+                <div class="app-platforms">
+                    <p>Content also available on:</p>
+                    <div>
+                        <button><img src="../svg-icons/Main/App-Advertisement-Section/Google-Podcast-Logo.svg" alt="Google Podcast logo"></button>
+                        <button><img src="../svg-icons/Main/App-Advertisement-Section/Spotify-Logo.svg" alt="Spotify logo"></button>
+                        <button><img src="../svg-icons/Main/App-Advertisement-Section/Youtube-Logo.svg" alt="Youtube logo"></button>
+                    </div>
+                </div>
+    
+                <!-- <div class="app-image-pack">
+                    <img src="../img/App-Advertisement-Section/Trending-Image.jpg" alt="'Pod of Cast' app on smartphone looking from up">
+                    <img src="../img/App-Advertisement-Section/Now-Playing-Image.jpg" alt="Pod of Cast' app on smartphone looking from up">
+                </div> -->
+    
+            </section>
+        </main>
+    
+        <footer>
+    
+            <div class="footer-main">
+    
+                <div class="footer-text-area-1">
+                    <div class="footer-logo">
+                        <img src="../svg-icons/Header/Nav-Main-Logo/logo.svg" alt="Nav logo circle">
+                        <p>Ⓒ 2022</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    <div class="socials">
+                        <button><img src="../svg-icons/Footer/Text-Area-1/Twitter-Logo.svg" alt="Twitter logo"></button>
+                        <button><img src="../svg-icons/Footer/Text-Area-1/Instagram-Logo.svg" alt="Instagram logo"></button>
+                        <button><img src="../svg-icons/Footer/Text-Area-1/Tiktok-Logo.svg" alt="Tiktok logo"></button>
+                    </div>
+                </div>
+    
+                <div class="footer-text-area-2">
+                    <div class="footer-menu-1">
+                        <p>About</p>
+                        <p>Testimonials</p>
+                        <p>Features</p>
+                    </div>
+                    <div class="footer-menu-2">
+                        <p>Episodes</p>
+                        <p>Pricing</p>
+                        <p>Blog</p>
+                    </div>
+                </div>
+    
+                <div class="footer-text-area-3">
+                    <div class="footer-platforms">
+                        <p>Listen to episodes on your fav platform:</p>
+                        <div>
+                            <img src="../svg-icons/Footer/Text-Area-3/Google-Podcast-Logo.svg" alt="Google Podcast logo">
+                            <img src="../svg-icons/Footer/Text-Area-3/Spotify-Logo.svg" alt="Spotify logo">
+                            <img src="../svg-icons/Footer/Text-Area-3/Youtube-Logo.svg" alt="YouTube logo">
+                        </div>
+                    </div>
+                    <div class="footer-distribution-platforms">
+                        <p>App available on:</p>
+                        <div>
+                            <img src="../svg-icons/Footer/Text-Area-3/App_Store-Logo.svg" alt="App Store logo">
+                            <img src="../svg-icons/Footer/Text-Area-3/Google_Play-Logo.svg" alt="Google Play logo">
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="footnote">
+                <div class="footnote-line"></div>
+                <div class="footnote-text">
+                    <p>Ⓒ2022. All Rights Reserved.<span>Pod of Cast</span></p>
+                    <p>Terms - Privacy</p>
+                </div>
+            </div>
+    
+        </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="../js/swiper-opinions.js"></script>
+        <script src="../js/splide-header.js"></script>
+        <script src="../js/main.js"></script>
+        
+    </body>
 </html>
